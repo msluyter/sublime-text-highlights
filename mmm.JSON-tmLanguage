@@ -8,7 +8,7 @@
     },
     { "match": "^\\S+.*?:\\s*$",
       "name": "variable.parameter.mmm",
-      "comment": "Headers"
+      "comment": "Sub headers"
     },
     { "match": "---+",
       "name": "storage.type.mmm",
@@ -17,7 +17,7 @@
 
     { "match": "^\\s+[\\+|\\-|\\*]",
       "name": "constant.numeric.mmm",
-      "comment": "bulleted lists..."
+      "comment": "Bulleted lists..."
     },
     { "name": "variable.complex.mmm",
        "begin": "\"",
@@ -34,7 +34,7 @@
        "endCaptures": {
             "0": { "name": "string.mmm"}
        },
-       "comment": "quoted strings"
+       "comment": "Double quoted strings"
     },
     { "name": "variable.complex.mmm",
        "begin": "'",
@@ -51,7 +51,7 @@
        "endCaptures": {
             "0": { "name": "string.mmm"}
        },
-       "comment": "quoted strings"
+       "comment": "Single quoted strings"
     },
     { "name": "variable.complex.mmm",
        "begin": "#sql",
@@ -71,7 +71,7 @@
        "endCaptures": {
             "0": { "name": "comment.mmm"}
        },
-       "comment": "sql"
+       "comment": "sql code highlighting"
     }
   ],
   "uuid": "c6df4ff3-4c69-4c8a-9c38-533f85e80409"
