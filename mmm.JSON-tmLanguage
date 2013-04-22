@@ -1,0 +1,78 @@
+{ "name": "mmm",
+  "scopeName": "source.mmm",
+  "fileTypes": ["mmm"],
+  "patterns": [
+    { "match": "^\\*\\*\\*.*?\\*\\*\\*$",
+      "name": "entity.name.class.mmm",
+      "comment": "Headers"
+    },
+    { "match": "^\\S+.*?:\\s*$",
+      "name": "variable.parameter.mmm",
+      "comment": "Headers"
+    },
+    { "match": "---+",
+      "name": "storage.type.mmm",
+      "comment": "Separators"
+    },
+
+    { "match": "^\\s+[\\+|\\-|\\*]",
+      "name": "constant.numeric.mmm",
+      "comment": "bulleted lists..."
+    },
+    { "name": "variable.complex.mmm",
+       "begin": "\"",
+       "beginCaptures": {
+           "0": { "name": "string.mmm" }
+       },
+       "patterns": [
+           { "include": "$self" },
+           {  "name": "string.mmm",
+              "match": "."
+           }
+       ],
+       "end": "\"",
+       "endCaptures": {
+            "0": { "name": "string.mmm"}
+       },
+       "comment": "quoted strings"
+    },
+    { "name": "variable.complex.mmm",
+       "begin": "'",
+       "beginCaptures": {
+           "0": { "name": "string.mmm" }
+       },
+       "patterns": [
+           { "include": "$self" },
+           {  "name": "string.mmm",
+              "match": "."
+           }
+       ],
+       "end": "'",
+       "endCaptures": {
+            "0": { "name": "string.mmm"}
+       },
+       "comment": "quoted strings"
+    },
+    { "name": "variable.complex.mmm",
+       "begin": "#sql",
+       "beginCaptures": {
+           "0": { "name": "comment.mmm" }
+       },
+       "patterns": [
+           { "include": "$self" },
+           {  "name": "keyword.mmm",
+              "match": "select|from|join|on|in|\\*"
+           },
+           {  "name": "keyword.mmm",
+              "match": "where"
+           }
+       ],
+       "end": "#/sql",
+       "endCaptures": {
+            "0": { "name": "comment.mmm"}
+       },
+       "comment": "sql"
+    }
+  ],
+  "uuid": "c6df4ff3-4c69-4c8a-9c38-533f85e80409"
+}
