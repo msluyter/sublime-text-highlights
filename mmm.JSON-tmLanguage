@@ -37,19 +37,9 @@
        "comment": "Double quoted strings"
     },
     { "name": "variable.complex.mmm",
-       "begin": "'",
-       "beginCaptures": {
-           "0": { "name": "string.mmm" }
-       },
-       "patterns": [
-           { "include": "$self" },
-           {  "name": "string.mmm",
-              "match": "."
-           }
-       ],
-       "end": "'",
-       "endCaptures": {
-            "0": { "name": "string.mmm"}
+       "match": "('.*?')",
+       "captures": {
+            "1" : {"name" : "string.mmm" }
        },
        "comment": "Single quoted strings"
     },
